@@ -4,7 +4,7 @@ _Recursively search a service for all possibilities until the optimal set is fou
 
 ## About
 
-Many sites like [North Carolina's Corprate Registry](https://www.secretary.state.nc.us/corporations/CSearch.aspx) allow you to search for records but limit the results to a set number (i.e. no more than 500).  Thus, in order to find the full list of results, you need to search through many combinations of letters and numbers. `fishfinder` provides an abstract framework for performing such tasks by generating all possible search queries of a certain length (say two letters), returning the results, and testing the results to determine which queries to add to the set. All searches are performed via `gevent` for concurrency. 
+Many sites like [North Carolina's Corporate Registry](https://www.secretary.state.nc.us/corporations/CSearch.aspx) allow you to search for records but limit the results to a set number (i.e. no more than 500).  Thus, in order to find the full list of results, you need to search through many combinations of letters and numbers. `fishfinder` provides an abstract framework for performing such tasks by generating all possible search queries of a certain length (say two letters), returning the results, and testing the results to determine which queries to add to the set. All searches are performed via `gevent` for concurrency. 
 
 ## Install
 ```

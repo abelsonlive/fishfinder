@@ -1,5 +1,5 @@
 from itertools import product
-from random import random 
+import random 
 import string
 
 import gevent
@@ -8,11 +8,12 @@ import gevent.monkey
 gevent.monkey.patch_all()
 
 class FishFinder:
-  def __init__(self, min_length=2, incl_nums=False, exclude = []):
+  def __init__(self, min_length=2, incl_nums=False, exclude = [], randomize=False):
     
     # parameters for search generation
     self.min_length = min_length 
     self.incl_nums = incl_nums
+    self.randomize = randomize
 
     # Initialized list of good 
     # search terms and exclusion set.   
@@ -61,7 +62,12 @@ class FishFinder:
       possibilities = product(self.to_search, self.characters)
 
     queries = ("".join(q) for q in possibilities if "".join(q) not in self.exclude)
-    return queries
+
+    if self.randomize:
+      return random.shuffle(list(queries))
+
+    else:
+      return queries
 
   def run(self, num_workers=10):
     # recursively generate queries and 
