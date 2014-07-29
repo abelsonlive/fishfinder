@@ -8,9 +8,7 @@ Many sites like [North Carolina's Corprate Registry](https://www.secretary.state
 
 ## Install
 ```
-mkvirtualenv fishfinder
-git clone https://github.com/bibliotech/fishfinder.git
-pip install -e fishfinder/
+pip install fishfinder
 ```
 
 ## Usage 
