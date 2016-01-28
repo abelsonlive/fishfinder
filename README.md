@@ -38,7 +38,7 @@ class MyFinder(FishFinder):
     You also have access to the query in this method.
 
     This method should return one of three numbers:
-    0 = No Reusults
+    0 = No Results
     1 = Pass 
     2 = Needs More 
     """
