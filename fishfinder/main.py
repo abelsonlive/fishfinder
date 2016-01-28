@@ -1,11 +1,12 @@
+import gevent.monkey
+gevent.monkey.patch_all()
+import gevent
+from gevent.queue import Queue
+
 from itertools import product
 import random 
 import string
 
-import gevent
-from gevent.queue import Queue
-import gevent.monkey
-gevent.monkey.patch_all()
 
 class FishFinder:
   def __init__(self, min_length=2, incl_nums=False, exclude = [], randomize=False):

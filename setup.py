@@ -17,7 +17,7 @@ except LookupError:
 # setup
 setup(
   name='fishfinder',
-  version='0.0.2',
+  version='0.0.3',
   description='recursively search all possibilities until the optimal set is found',
   long_description = '',
   classifiers=[

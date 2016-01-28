@@ -20,7 +20,7 @@ from fishfinder import FishFinder
 
 class MyFinder(FishFinder):
   def __init__(self):
-    FishFinder.__init__(self, min_length=2, incl_numbers=False, exclude=['a'])
+    FishFinder.__init__(self, min_length=2, incl_nums=False, exclude=['a'])
 
   def setup(self):
     # This will run before the search / test loop starts 
